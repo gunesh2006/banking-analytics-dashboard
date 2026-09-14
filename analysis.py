@@ -1,21 +1,24 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 
 # =========================================================
 # 1. LOAD DATA
 # =========================================================
 
+BASE_DIR = Path(__file__).resolve().parent
+
 transactions = pd.read_csv(
-    r"C:\Users\Asus\OneDrive\Desktop\analytics-project\datasets\bank_transactions.csv"
+    BASE_DIR / "datasets" / "bank_transactions.csv"
 )
 
 customer = pd.read_csv(
-    r"C:\Users\Asus\OneDrive\Desktop\analytics-project\datasets\customers_master.csv"
+    BASE_DIR / "datasets" / "customers_master.csv"
 )
 
 loan = pd.read_csv(
-    r"C:\Users\Asus\OneDrive\Desktop\analytics-project\datasets\loan_info.csv"
+    BASE_DIR / "datasets" / "loan_info.csv"
 )
 
 
